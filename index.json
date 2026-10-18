@@ -4,23 +4,64 @@
     {
       "id": "weather",
       "kind": "source",
-      "name": { "zh": "天气", "en": "Weather" },
-      "description": { "zh": "Open-Meteo 当前天气，不需要 API key", "en": "Current weather from Open-Meteo, no API key" },
+      "name": {
+        "zh": "天气",
+        "en": "Weather"
+      },
+      "description": {
+        "zh": "Open-Meteo 当前天气，不需要 API key",
+        "en": "Current weather from Open-Meteo, no API key"
+      },
       "repo": "github:neatstudio/glance-plugin-weather",
       "ref": "v1.0.0",
       "hub_api": 1,
-      "permissions": ["network"],
+      "permissions": [
+        "network"
+      ],
       "verified": true
     },
     {
       "id": "hello_source",
       "kind": "source",
-      "name": { "zh": "示例数据源", "en": "Hello source" },
-      "description": { "zh": "模板仓库自带的示例：一句问候和一个计数器", "en": "The template's example: a greeting and a counter" },
+      "name": {
+        "zh": "示例数据源",
+        "en": "Hello source"
+      },
+      "description": {
+        "zh": "模板仓库自带的示例：一句问候和一个计数器",
+        "en": "The template's example: a greeting and a counter"
+      },
       "repo": "github:neatstudio/glance-plugin-template",
       "ref": "main",
       "hub_api": 1,
       "permissions": [],
+      "verified": true
+    },
+    {
+      "id": "usage",
+      "kind": "source",
+      "name": {
+        "zh": "AI 用量",
+        "en": "AI usage"
+      },
+      "description": {
+        "zh": "Cursor / Grok / OpenCode Go / Antigravity / Devin 的已用百分比",
+        "en": "Percent used across AI tools"
+      },
+      "repo": "github:neatstudio/glance-plugin-usage",
+      "ref": "v1.0.0",
+      "hub_api": 1,
+      "permissions": [
+        "network",
+        "filesystem:data",
+        "secrets:xai",
+        "secrets:opencode",
+        "secrets:opencode_go",
+        "secrets:devin",
+        "secrets:devin_seat_url",
+        "secrets:agy_client_id",
+        "secrets:agy_client_secret"
+      ],
       "verified": true
     }
   ]
